@@ -68,6 +68,8 @@ message Transformation {
     MaskValue maskValue = 5;
     // Encrypt/Decrypt the text
     FPEValue fPEValue = 6;
+    // Shift Date
+    ShiftDateValue shiftDateValue = 7;
 }
 
 // Replace the value with the given new value. 
@@ -108,6 +110,12 @@ message FPEValue {
     string tweak = 2;
     // true to decrypt value
     bool decrypt = 3;
+}
+
+// Shift the date with days since moment zero
+message ShiftDateValue {
+    // days since moment zero
+    int32 daysSinceMomentZero = 1;
 }
 
 // DBConfig represents the Database configuration - the DB connection string and the table name
