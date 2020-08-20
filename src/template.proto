@@ -124,6 +124,8 @@ message ShiftDateValue {
 message ShiftDateToDaysSinceMomentZeroValue {
     // date of moment zero
     string dateOfMomentZero = 1;
+    // date layout
+    string dateLayout = 2;
 }
 // DBConfig represents the Database configuration - the DB connection string and the table name
 // Supported database: mssql, mysql, sqlite3, postgreSQL, oracle
