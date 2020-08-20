@@ -70,6 +70,8 @@ message Transformation {
     FPEValue fPEValue = 6;
     // Shift Date
     ShiftDateValue shiftDateValue = 7;
+    // Shift Date to days since moment zero
+    ShiftDateToDaysSinceMomentZeroValue shiftDateToDaysSinceMomentZeroValue  = 8;
 }
 
 // Replace the value with the given new value. 
@@ -118,6 +120,11 @@ message ShiftDateValue {
     int32 daysSinceMomentZero = 1;
 }
 
+// Shift the date to days since moment zero
+message ShiftDateToDaysSinceMomentZeroValue {
+    // date of moment zero
+    string dateOfMomentZero = 1;
+}
 // DBConfig represents the Database configuration - the DB connection string and the table name
 // Supported database: mssql, mysql, sqlite3, postgreSQL, oracle
 message DBConfig {
