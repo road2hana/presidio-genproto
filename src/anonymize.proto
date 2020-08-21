@@ -17,6 +17,14 @@ message AnonymizeApiRequest {
   AnalyzeTemplate analyzeTemplate = 4;
   // Optional parameter for running the anonymizer without creating a template. 
   AnonymizeTemplate anonymizeTemplate = 5;
+  // Optional parameter for anonymizing text for a given context
+  AnonymizeTextContext anonymizeTextContext = 6;
+}
+
+// Anonymize text metadata
+message AnonymizeTextContext {
+  //Text Create Date
+  string CreateDate = 1;
 }
 
 // AnonymizeRequest represents the request to the anonymize service via GRPC 
