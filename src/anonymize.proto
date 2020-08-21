@@ -35,6 +35,8 @@ message AnonymizeRequest {
   AnonymizeTemplate template = 2;
   // The analyze result containing the field type and location of the sensetive data to be anonymized.
   repeated AnalyzeResult analyzeResults = 3;
+  // The context of the anonymize text
+  AnonymizeTextContext anonymizeTextContext = 4;
 }
 
 // AnonymizeResponse represents the anonymize service response 
